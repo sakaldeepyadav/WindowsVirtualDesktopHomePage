@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Alt-Web :: Fading Page Load &amp; Redirect Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Latest compiled and minified Bootstrap CSS-->
+<link rel="stylesheet" href="bootstrap.min.css" crossorigin="anonymous">
+
+<style>
+body {
+margin:0;
+padding:0;
+z-index:-2;
+background:#000;
+}
+
+#background{
+margin:0;
+padding:0;
+position:absolute;
+z-index: -1; 
+display: none;
+top:0;
+left:0;
+width: 100%;
+height: 200%;
+background: url(Logo2.jpg) center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.jumbotron {
+width: 80%;
+margin: 5% auto;
+border: 3px solid #990000;
+background: rgba(255,153,153,0.6);
+text-align:center;
+color: #FFF;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<noscript style="font-size: 26px; color:yellow">WARNING: This page requires JavaScript. Please turn JavaScript on and refresh your browser.</noscript>
+<div id="background" class="row">
+<div class="jumbotron">
+
+<h2>Connect to Windows Virtual Desktops:</h2>
+<p class="text-center"><a class="btn btn-info" href="https://go.microsoft.com/fwlink/?linkid=2068602">Windows</a>
+<a class="btn btn-info" href="https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx">Android</a>
+<a class="btn btn-info" href="https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12">macOS</a>
+<a class="btn btn-info" href="https://aka.ms/rdios">iOS</a>
+<a class="btn btn-info" href="https://rdweb.wvd.microsoft.com/webclient/index.html">Web</a></p>
+<p class="text-center"><img class="center-block img-responsive"src="Logo1.png" alt="alt-web logo" /></p>
+<p>In 5 seconds, this page will redirect you to the Web Client.</p>
+</div>
+</div>
+</div>
+
+<!--latest jQuery 3--> 
+<script src="jquery-3.2.1.min.js" crossorigin="anonymous"></script> 
+
+<!--Bootstrap-->
+<script src="bootstrap.min.js" crossorigin="anonymous"></script>
+
+
+<script>
+//invoke background fadein on page load
+$(window).ready(function() {
+	$('#background').fadeIn(3700, function() {
+	$(this).delay(5000).fadeOut(2000, function() { window.location = 'https://rdweb.wvd.microsoft.com/webclient/index.html'; });
+  }); 
+});
+</script>         
+</body>
+</html>
