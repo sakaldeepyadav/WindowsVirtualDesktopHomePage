@@ -8,3 +8,8 @@ It can be implemented as a static website in Static Web App, Step by Step:
   1. Clone repository
   2. Create a Static Web App (https://portal.azure.com/#create/Microsoft.StaticApp)
   3. Provide details of the cloned repository.
+
+##To do:
+  1. Pre Authentication using Auzre Function
+  2. Display RD Hosts statistics using Auzre Function
+  3. Random wall picture
