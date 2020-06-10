@@ -14,3 +14,4 @@ It can be implemented as a static website in Static Web App, Step by Step:
 2.	Display RD Hosts statistics using Azure Function
 3.	Random wall picture
 
+DEMO: https://black-flower-05fe2290f.azurestaticapps.net
